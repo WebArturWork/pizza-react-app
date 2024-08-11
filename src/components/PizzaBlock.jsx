@@ -17,10 +17,10 @@ export default function PizzaBlock({title, imageUrl, price, types, sizes}) {
             <h4 className="pizza-block__title">{title}</h4>
             <div className="pizza-block__selector">
                 <ul>
-                    {types.map(type => <li onClick={() => setActiveType(type)} className={activeType === type ? "active" : ""}>{pizzaTypes[type]}</li>)}
+                    {types.map((type, i) => <li key={i} onClick={() => setActiveType(type)} className={activeType === type ? "active" : ""}>{pizzaTypes[type]}</li>)}
                 </ul>
                 <ul>
-                    {sizes.map((size, i) => <li onClick={() => setActiveSize(i)} className={activeSize === i ? "active" : ""}>{size} см.</li>)}
+                    {sizes.map((size, i) => <li key={i} onClick={() => setActiveSize(i)} className={activeSize === i ? "active" : ""}>{size} см.</li>)}
                 </ul>
             </div>
             <div className="pizza-block__bottom">
@@ -39,7 +39,7 @@ export default function PizzaBlock({title, imageUrl, price, types, sizes}) {
                         />
                     </svg>
                     <span>Добавить</span>
-                    <i>2</i>
+                    <i>0</i>
                 </button>
             </div>
         </div>
