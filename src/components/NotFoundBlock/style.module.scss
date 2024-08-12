@@ -1,0 +1,28 @@
+.root {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.smile {
+  font-size: 52px;
+}
+
+.button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #232323;
+  border: 1px solid #232323;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all .3s;
+  &:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #232323;
+  }
+}
