@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
-import logoSvg from '../assets/img/pizza-logo.svg';
+import logoSvg from '../../assets/img/pizza-logo.svg';
 
-export default function Header() {
+import style from "./style.module.scss";
+
+const HeaderBlock = () => {
     return (
-        <div className="header">
-            <div className="container">
-                <Link to="/" className="header__logo">
+        <div className={style.header}>
+            <div className={style.container}>
+                <Link to="/" className={style.header__logo}>
                     <img width="38" src={logoSvg} alt="Pizza logo"/>
-                    <div>
-                        <h1>React Pizza</h1>
+                    <div className={style.header__text}>
+                        <h1>Pizza Doro</h1>
                         <p>самая вкусная пицца во вселенной</p>
                     </div>
                 </Link>
-                <div className="header__cart">
-                    <Link to="/cart" className="button button--cart">
-                        <span>520 ₽</span>
+                <div className={style.header__cart}>
+                    <Link to="/cart" className={`${style.button} ${style.button__cart}`}>
+                        <span>0 ₽</span>
                         <div className="button__delimiter"></div>
                         <svg
                             width="18"
@@ -45,10 +47,12 @@ export default function Header() {
                                 strokeLinejoin="round"
                             />
                         </svg>
-                        <span>3</span>
+                        <span>0</span>
                     </Link>
                 </div>
             </div>
         </div>
     )
 }
+
+export default HeaderBlock;

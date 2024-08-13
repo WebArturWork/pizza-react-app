@@ -1,10 +1,15 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
+
+// Blocks
+import HeaderBlock from "./components/HeaderBlock";
+
+// Pages
 import Home from "./components/pages/Home";
 import Cart from "./components/pages/Cart";
 import NotFound from "./components/pages/NotFound";
 
+// Styles
 import './scss/app.scss';
 
 
@@ -12,7 +17,7 @@ function App() {
   return (
       <div className="App">
         <div className="wrapper">
-          <Header/>
+          <HeaderBlock/>
           <div className="content">
             <div className="container">
                 <Routes>

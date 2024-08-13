@@ -1,8 +1,9 @@
-@import '../variables';
-
 .categories {
   ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
 
     li {
       background-color: #f9f9f9;
@@ -12,6 +13,7 @@
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.1s ease-in-out;
+
 
       &:hover {
         background-color: darken(#f9f9f9, 2%);
@@ -26,5 +28,21 @@
         color: #fff;
       }
     }
+
+    @media (max-width: 768px) {
+      li {
+        padding: 10px 26px;
+      }
+    }
+
+    .active {
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      border-radius: 30px;
+      cursor: auto;
+    }
+
+
   }
 }
+

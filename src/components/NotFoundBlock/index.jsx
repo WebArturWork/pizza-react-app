@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import styles from "./style.module.scss";
 
-export default function NotFoundBlock() {
+const NotFoundBlock = () => {
     return (
         <div className={styles.root}>
             <p className={styles.smile}>😕</p>
@@ -12,3 +12,5 @@ export default function NotFoundBlock() {
         </div>
     )
 }
+
+export default NotFoundBlock;

@@ -1,9 +1,9 @@
-import {useState} from "react";
+import React from "react";
 
 export default function Sort() {
 
-    const [open, setOpen] = useState(false);
-    const [sortList, setSortList] = useState(0);
+    const [open, setOpen] = React.useState(false);
+    const [sortList, setSortList] = React.useState(0);
 
     const list = ["популярности", "цене", "алфавиту"];
     const sortName = list[sortList];

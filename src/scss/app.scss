@@ -15,27 +15,15 @@ body {
   margin: 50px auto;
   border-radius: 10px;
   max-width: 1400px;
-}
 
-.content {
-  padding: 40px 0;
-
-  &__title {
-    margin: 35px 0;
-  }
-
-  &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  @media (max-width: 768px) {
+    width: calc(100vw - 0px);
+    margin: 0 auto;
+    border-radius: 0;
   }
 }
+
+
 
 .container {
   width: $container-width;
@@ -61,6 +49,7 @@ body {
     display: flex;
     align-items: center;
     font-size: 32px;
+    padding: 40px 0;
 
     svg {
       position: relative;
