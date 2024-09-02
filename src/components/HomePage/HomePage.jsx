@@ -1,6 +1,8 @@
 import React from "react";
 
 import Header from "../Header/Header";
+import Navigation from "./Navigation/Navigation";
+import TopProduct from "./TopProduct/TopProduct";
 import FilterAllProduct from "../FilterAllProduct/FilterAllProduct";
 import ProductSkeleton from "./Product/ProductSkeleton";
 import Product from "./Product/Product";
@@ -40,6 +42,8 @@ const HomePage = () => {
     return (
         <div>
             <Header />
+            <Navigation />
+            {!isLoading && <TopProduct items={items} />}
             <FilterAllProduct />
             <h2 className={styles.content__title}>Все пиццы</h2>
             <div className={styles.content__items}>

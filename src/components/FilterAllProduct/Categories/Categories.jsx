@@ -4,7 +4,7 @@ import style from "./Categories.module.scss";
 const Categories = () => {
 
     const [activeIndex, setActiveIndex] = React.useState(0);
-    const categories = ['Все', 'Мясные','Вегетарианская','Гриль','Острые','Закрытые',];
+    const categories = ['Все', 'Мясные','Вегетарианская','Гриль','Острые',];
 
     return (
         <div className={style.categories}>
