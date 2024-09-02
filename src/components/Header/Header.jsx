@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import logoSvg from '../../assets/img/pizza-logo.svg';
 
-import style from "./style.module.scss";
+import style from "./Header.module.scss";
 
-const HeaderBlock = () => {
+const Header = () => {
     return (
         <div className={style.header}>
             <div className={style.container}>
@@ -55,4 +55,4 @@ const HeaderBlock = () => {
     )
 }
 
-export default HeaderBlock;
+export default Header;

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Sort() {
+const Sort = () => {
 
     const [open, setOpen] = React.useState(false);
     const [sortList, setSortList] = React.useState(0);
@@ -8,7 +8,9 @@ export default function Sort() {
     const list = ["популярности", "цене", "алфавиту"];
     const sortName = list[sortList];
 
-    function onClickListItem (i) {
+
+
+    const onClickListItem = (i) => {
         setSortList(i);
         setOpen(false);
     }
@@ -44,3 +46,5 @@ export default function Sort() {
         </div>
     )
 }
+
+export default Sort;

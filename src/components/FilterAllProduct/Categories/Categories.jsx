@@ -1,7 +1,7 @@
 import React from "react";
-import style from "./style.module.scss";
+import style from "./Categories.module.scss";
 
-const CategoriesBlock = () => {
+const Categories = () => {
 
     const [activeIndex, setActiveIndex] = React.useState(0);
     const categories = ['Все', 'Мясные','Вегетарианская','Гриль','Острые','Закрытые',];
@@ -17,4 +17,4 @@ const CategoriesBlock = () => {
     )
 }
 
-export default CategoriesBlock;
+export default Categories;

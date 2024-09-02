@@ -1,8 +1,8 @@
 import React from "react";
 
-import style from "./style.module.scss";
+import style from "./Product.module.scss";
 
-const PizzaBlock = ({title, imageUrl, price, types, sizes}) => {
+const Product = ({title, imageUrl, price, types, sizes}) => {
 
     const pizzaTypes = ['тонкая', 'традиционная']
 
@@ -35,4 +35,4 @@ const PizzaBlock = ({title, imageUrl, price, types, sizes}) => {
     )
 }
 
-export default PizzaBlock;
+export default Product;

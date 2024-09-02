@@ -1,15 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-// Blocks
-import HeaderBlock from "./components/HeaderBlock";
+import HomePage from "./components/HomePage/HomePage";
+import BasketPage from "./components/BasketPage/BasketPage";
+import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 
-// Pages
-import Home from "./components/pages/Home";
-import Cart from "./components/pages/Cart";
-import NotFound from "./components/pages/NotFound";
-
-// Styles
 import './scss/app.scss';
 
 
@@ -17,13 +12,12 @@ function App() {
   return (
       <div className="App">
         <div className="wrapper">
-          <HeaderBlock/>
           <div className="content">
             <div className="container">
                 <Routes>
-                    <Route path="/" element={<Home/>} />
-                    <Route path="/cart" element={<Cart/>} />
-                    <Route path="*" element={<NotFound />} />
+                    <Route path="/" element={<HomePage/>} />
+                    <Route path="/basket" element={<BasketPage/>} />
+                    <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </div>
           </div>
