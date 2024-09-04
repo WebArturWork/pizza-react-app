@@ -18,6 +18,8 @@ const apiKey = '12345';
 
 const HomePage = () => {
     const categoriesId = useSelector(state => state.filter.categoriesId);
+    const sortId = useSelector((state) => state.sort.sortId);
+    
     
     const [items, setItems] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
@@ -31,7 +33,7 @@ const HomePage = () => {
                 },
             body: JSON.stringify({
                 action: 'routeRequest',
-                id: categoriesId
+                filterId: categoriesId,
             })
 
             }
@@ -42,6 +44,27 @@ const HomePage = () => {
             setIsLoading(false);
         })
     }, [categoriesId]);
+
+    React.useEffect(() => {
+        fetch(apiUrl, {
+                method: "POST",
+                headers: {
+                    'Authorization': `${apiKey}`,
+                    'Content-Type': 'application/json'
+                },
+            body: JSON.stringify({
+                action: 'routeSortRequest',
+                sortId: sortId
+            })
+
+            }
+        ).then(res => {
+            return res.json()
+        }).then((res) => {
+            setItems(res);
+            setIsLoading(false);
+        })
+    }, [sortId]);
 
     return (
         <div>
