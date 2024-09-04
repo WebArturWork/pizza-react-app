@@ -7,6 +7,8 @@ import FilterAllProduct from "../FilterAllProduct/FilterAllProduct";
 import ProductSkeleton from "./Product/ProductSkeleton";
 import Product from "./Product/Product";
 
+import { useSelector } from "react-redux";
+
 import styles from "./HomePage.module.scss";
 
 
@@ -15,9 +17,10 @@ const apiUrl = 'https://my-api.local/public/';
 const apiKey = '12345';
 
 const HomePage = () => {
-
-    const [items, setItems] = React.useState([])
-    const [isLoading, setIsLoading] = React.useState(true)
+    const categoriesId = useSelector(state => state.filter.categoriesId);
+    
+    const [items, setItems] = React.useState([]);
+    const [isLoading, setIsLoading] = React.useState(true);
 
     React.useEffect(() => {
         fetch(apiUrl, {
@@ -28,6 +31,7 @@ const HomePage = () => {
                 },
             body: JSON.stringify({
                 action: 'routeRequest',
+                id: categoriesId
             })
 
             }
@@ -37,7 +41,7 @@ const HomePage = () => {
             setItems(res);
             setIsLoading(false);
         })
-    }, []);
+    }, [categoriesId]);
 
     return (
         <div>

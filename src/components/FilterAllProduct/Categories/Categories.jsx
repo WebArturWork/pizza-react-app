@@ -1,16 +1,22 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setCategoriesId } from '../../../redux/Filter/filterSlice';
+
 import style from "./Categories.module.scss";
 
 const Categories = () => {
-
-    const [activeIndex, setActiveIndex] = React.useState(0);
-    const categories = ['All', 'Meat','Vegetarian','Grill','Sharp',];
+    const dispatch = useDispatch();
+    const filter = useSelector((state) => state.filter);
+    
+    const handleCategoriesChange = (id) => {
+        dispatch(setCategoriesId(id))
+    }
 
     return (
         <div className={style.categories}>
             <ul>
-                {categories.map((item, index) => (
-                    <li key={index} onClick={() => setActiveIndex(index)} className={activeIndex === index ? style.active : ""}>{item}</li>
+                {filter.categories.map((item, index) => (
+                    <li key={index} onClick={() => handleCategoriesChange(index)} className={filter.categoriesId === index ? style.active : ""}>{item}</li>
                 ))}
             </ul>
         </div>
