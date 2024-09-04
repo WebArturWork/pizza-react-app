@@ -45,7 +45,7 @@ const HomePage = () => {
             <Navigation />
             {!isLoading && <TopProduct items={items} />}
             <FilterAllProduct />
-            <h2 className={styles.content__title}>Все пиццы</h2>
+            <h2 className={styles.content__title}>All the pizzas</h2>
             <div className={styles.content__items}>
                 {
                     isLoading

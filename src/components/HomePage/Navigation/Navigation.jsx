@@ -8,11 +8,11 @@ const Navigation = () => {
     <section className={styles.root}>
         <nav>
             <ul className={styles.nav}>
-                <li className={styles.link}><Link to="#">Пиццы</Link></li>
-                <li className={styles.link}><Link to="#">Напитки</Link></li>
-                <li className={styles.link}><Link to="#">Десерты</Link></li>
-                <li className={styles.link}><Link to="#">Соусы</Link></li>
-                <li className={styles.link}><Link to="#">Акции</Link></li>
+                <li className={styles.link}><Link to="#">Pizzas</Link></li>
+                <li className={styles.link}><Link to="#">Drinks</Link></li>
+                <li className={styles.link}><Link to="#">Desserts</Link></li>
+                <li className={styles.link}><Link to="#">Sauces</Link></li>
+                <li className={styles.link}><Link to="#">Stocks</Link></li>
             </ul>
         </nav>
     </section>

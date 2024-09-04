@@ -10,13 +10,13 @@ const Header = () => {
                 <Link to="/" className={style.header__logo}>
                     <img width="38" src={logoSvg} alt="Pizza logo"/>
                     <div className={style.header__text}>
-                        <h1>Pizza Doro</h1>
-                        <p>самая вкусная пицца во вселенной</p>
+                        <h1>Pizza Lau</h1>
+                        <p>The most delicious pizza in the universe</p>
                     </div>
                 </Link>
                 <div className={style.header__cart}>
                     <Link to="/basket" className={`${style.button} ${style.button__cart}`}>
-                        <span>0 ₽</span>
+                        <span>0 €</span>
                         <div className="button__delimiter"></div>
                         <svg
                             width="18"

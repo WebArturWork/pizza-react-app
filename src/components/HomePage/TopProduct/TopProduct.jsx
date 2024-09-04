@@ -6,12 +6,12 @@ import styles from "./TopProduct.module.scss";
 const TopProduct = ({ items }) => {
   return (
     <section className={styles.root}>
-      <h3>Топ сезона</h3>
+      <h3>Top of the season</h3>
       <div className={styles.wrap}>
         {items.map((item, id) =>
           item.rating > 4 ? (
-            <div>
-              <Link key={id} to="#" className={styles.item}>
+            <div key={id}>
+              <Link to="#" className={styles.item}>
                 <div className={styles.img}>
                   <picture>
                     <source
@@ -20,7 +20,7 @@ const TopProduct = ({ items }) => {
                     />
                     <img
                       src={item.imageUrl}
-                      alt="Описание изображения"
+                      alt=""
                     ></img>
                   </picture>
                 </div>

@@ -6,6 +6,18 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transform: translateY(0);
+  img {
+    transition: all 0.2s;
+  }
+  &:hover {
+    
+    cursor: pointer;
+
+    img {
+      transform: translateY(-5px);
+    }
+  }
 
   &__image {
     width: 260px;

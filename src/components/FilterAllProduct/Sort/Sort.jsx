@@ -5,7 +5,7 @@ const Sort = () => {
     const [open, setOpen] = React.useState(false);
     const [sortList, setSortList] = React.useState(0);
 
-    const list = ["популярности", "цене", "алфавиту"];
+    const list = ["popularity", "price", "alphabetically"];
     const sortName = list[sortList];
 
 
@@ -30,7 +30,7 @@ const Sort = () => {
                         fill="#2C2C2C"
                     />
                 </svg>
-                <b>Сортировка по:</b>
+                <b>Sorting by:</b>
                 <span onClick={() => setOpen(!open)}>{sortName}</span>
             </div>
             {open && (
