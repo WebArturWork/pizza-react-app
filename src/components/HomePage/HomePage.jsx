@@ -13,13 +13,12 @@ import styles from "./HomePage.module.scss";
 
 
 // Server settings
-const apiUrl = 'https://my-api.local/public/';
+const apiUrl = 'https://react-pizza.local/public/';
 const apiKey = '12345';
 
 const HomePage = () => {
     const categoriesId = useSelector(state => state.filter.categoriesId);
     const sortId = useSelector((state) => state.sort.sortId);
-    
     
     const [items, setItems] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
@@ -54,7 +53,8 @@ const HomePage = () => {
                 },
             body: JSON.stringify({
                 action: 'routeSortRequest',
-                sortId: sortId
+                sortId: sortId,
+                filterId: categoriesId,
             })
 
             }
@@ -64,7 +64,7 @@ const HomePage = () => {
             setItems(res);
             setIsLoading(false);
         })
-    }, [sortId]);
+    }, [sortId, categoriesId]);
 
     return (
         <div>
