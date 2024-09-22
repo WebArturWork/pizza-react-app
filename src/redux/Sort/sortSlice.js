@@ -8,6 +8,12 @@ const initialState = {
     "price (ascending)",
     "popularity",
   ],
+  sortOptions: [
+    { sortBy: "title", order: "asc" },
+    { sortBy: "price", order: "asc" },
+    { sortBy: "price", order: "desc" },
+    { sortBy: "rating", order: "desc" },
+  ],
 };
 
 export const sortSlice = createSlice({

@@ -15,13 +15,7 @@ import styles from "./HomePage.module.scss";
 const HomePage = () => {
   const categoriesId = useSelector((state) => state.filter.categoriesId);
   const sortId = useSelector((state) => state.sort.sortId);
-  const sortList = useSelector((state) => state.sort.sortList);
-  const sortOptions = [
-    { sortBy: "title", order: "asc" }, // sortId: 0
-    { sortBy: "price", order: "asc" }, // sortId: 1
-    { sortBy: "price", order: "desc" }, // sortId: 2
-    { sortBy: "rating", order: "desc" }, // sortId: 3
-  ];
+  const sortOptions = useSelector((state) => state.sort.sortOptions);
 
   const [isLoading, setIsLoading] = React.useState(true);
   const [items, setItems] = React.useState([]);
@@ -45,7 +39,7 @@ const HomePage = () => {
       .catch((error) => {
         console.error("There was an error fetching the data!", error);
       });
-  }, [categoriesId, sortId]);
+  }, [categoriesId, sortId, sortOptions]);
 
   return (
     <div>
