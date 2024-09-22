@@ -1,8 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  sortId: 0,
-  sortList: ["popularity", "price (descending)", "price (ascending)", "alphabetically"],
+  sortId: 3,
+  sortList: [
+    "alphabetically",
+    "price (descending)",
+    "price (ascending)",
+    "popularity",
+  ],
 };
 
 export const sortSlice = createSlice({
